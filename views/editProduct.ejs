@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edita</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <form action="/productDetail/<%= product.id %>" method="POST"  enctype="enctype=multipart/form-data">
+
+        <div class="form">
+            <h1>Edita el producto</h1>
+            <div class="group">
+                <input type="text" name="name" id="product_name" value="<%= product.name %>" ><span class="bar"></span>
+                <label for="">Nombre del producto</label>
+            </div>
+
+            <div class="group">
+                <input type="Text" name="price" value="<%= product.price %>" id="price" required><span class="bar"></span>
+                <label for="">Precio</label>
+            </div>
+
+            <div class="group">
+                <input type="file" name="avatar" value="<%= product.image%>" accept=".jpg" id="file" multiple>
+                <label for="file">Imagen</label>
+
+            </div>
+
+            <div class="group">
+                <textarea cols="200" id="descriptionDetail" rows="2"> <%= product.description%></textarea><span class="bar"></span>
+
+            </div>
+
+            <div class="group">
+                <label>Categoria</label>
+                <select class="select1" name="category" id="category">
+                <option value="" disabled> Selecciona una opcion</option>
+              <option value="unico" <%- product.category === 'unico' ? 'selected' : '' %>>Unico</option>
+				<option value="varios" <%- product.category === 'varios' ? 'selected' : '' %>>Varios</option>
+            </select>
+            </div>
+
+            <button type="submit">Guardar producto</button>
+        </div>
+    </form>
+    <script src=""></script>
+</body>
+
+</html>

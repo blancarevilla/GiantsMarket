@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form action="" method="POST" id="form">
+        <div class="form">
+            <h1>Registro</h1>
+            <div class="group">
+                <input type="text" name="" id="name" minlength="3" maxlength="15" required><span class="bar"></span>
+                <label for="">Nombre</label>
+            </div>
+
+            <div class="group">
+                <input type="text" name="" id="lastname" minlength="3" maxlength="20" required><span class="bar"></span>
+                <label for="">Apellido</label>
+            </div>
+
+            <div class="group">
+                <input type="email" name="" id="email" required><span class="bar"></span>
+                <label for="">Email</label>
+            </div>
+            <div class="group">
+                <input type="password" name="" id="password" minlength="8" maxlength="8" required><span class="bar"></span>
+                <label for="">Password</label>
+            </div>
+
+            <div class="group">
+                <input type="date" id="start" name="trip-start"
+                       value="yyyy-mm-dd">
+            </div>
+
+            <div class="group">
+              <label>Selecciona tu sexo</label> 
+              <select  class="select1" name="select1" id="select1">
+              <option value="mujer">Mujer</option>
+              <option value="hombre">Hombre</option>
+              <option value="hombre">Otro</option>
+            </select>
+            </div>
+
+            <button type="submit">Suscribirte</button>
+        </div>
+    </form>
+    <script src=""></script>
+</body>
+</html>
